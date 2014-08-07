@@ -15,4 +15,3 @@ angular.module("boeckMt", [])
 		$scope.repos = repos;
 		$scope.user = user;
 	});
-
