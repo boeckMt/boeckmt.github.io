@@ -14,7 +14,7 @@ angular.module("boeckMt", [])
 			"2":{
 				"name":"node-browser-log",
 				"desc":"send console.log from node to browser-console",
-				"url":""
+				"url":"https://github.com/boeckMt/my-first-node-module"
 				
 			}
 		};
