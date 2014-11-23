@@ -9,7 +9,7 @@ angular.module("boeckMt", [])
 			"1":{
 				"name":"esri-application-boilerplate-viewer",
 				"desc":"Configurable web mapping viewer based on esri's application-boilerplate-js",
-				"url":"http://boeckmt.github.io/application_boilerplate_viewer/?config=config2.xml"
+				"url":"http://boeckmt.github.io/esri-application-boilerplate-viewer/app/index.html?config=config2.xml"
 			},
 			"2":{
 				"name":"node-browser-log",
