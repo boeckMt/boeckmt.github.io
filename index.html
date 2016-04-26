@@ -25,7 +25,7 @@
         <h1>{{user.name}}</h1>
         <h2>on GitHub</h2>
         <div class="octocat"></div>
-        <a href="{{user.gitPageUrl}}" class="button"><small>Follow me on</small>GitHub</a>
+        <a ng-href="{{user.gitPageUrl}}" class="button" target="_blank"><small>Follow me on</small>GitHub</a>
       </div>
     </header>
 
@@ -36,7 +36,7 @@
           <div ng-repeat="repo in repos" class="repo">
             <h3>{{$index + 1}}. {{repo.name}}</h3>
             <p>{{repo.desc}}</p>
-            <a href="{{repo.url}}">View it live</a>
+            <a ng-href="{{repo.url}} target="_blank"">View it live</a>
           </div>
 
         </section>
