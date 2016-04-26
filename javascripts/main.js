@@ -1,23 +1,13 @@
 angular.module("boeckMt", [])
-	.controller("mainCtrl", function ($scope) {
+	.controller("mainCtrl", function ($scope, $http) {
 		var user = {
 			"name": "BoeckMt",
 			"gitPageUrl":"https://github.com/boeckMt"
 		};
+		
+		$http.get('repos.json').then(function(res){
+	          $scope.repos = res.data;                
+	        });
 
-		var repos = {
-			"1":{
-				"name":"esri-application-boilerplate-viewer",
-				"desc":"Configurable web mapping viewer based on esri's application-boilerplate-js",
-				"url":"http://boeckmt.github.io/esri-application-boilerplate-viewer/app/index.html?config=config2.xml"
-			},
-			"2":{
-				"name":"node-browser-log",
-				"desc":"send console.log from node to browser-console",
-				"url":"https://github.com/boeckMt/my-first-node-module"
-				
-			}
-		};
-		$scope.repos = repos;
 		$scope.user = user;
 	});
