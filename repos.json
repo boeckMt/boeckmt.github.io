@@ -9,5 +9,11 @@
   	"desc":"send console.log from node to browser-console",
   	"url":"https://github.com/boeckMt/my-first-node-module"
   	
+  },
+  "3":{
+  	"name":"ol-getCapsViewer",
+  	"desc":"OGC (WMS) GetCapabilities Viewer with openlayers 3",
+  	"url":"https://github.com/boeckMt/ol-getCapsViewer"
+  	
   }
 }
