@@ -6,7 +6,7 @@ angular.module("boeckMt", [])
 		};
 		
 		$http.get('repos.json').then(function(res){
-	          $scope.repos = res.data;                
+	          $scope.repos = res.data.repos;                
 	        });
 
 		$scope.user = user;
