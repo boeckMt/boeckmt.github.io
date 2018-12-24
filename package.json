@@ -1,0 +1,23 @@
+{
+  "name": "boeckmt.github.io",
+  "version": "1.0.0",
+  "description": "[View it on boeckmt.github.io](http://boeckmt.github.io/)",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boeckMt/boeckmt.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boeckMt/boeckmt.github.io/issues"
+  },
+  "homepage": "https://github.com/boeckMt/boeckmt.github.io#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "bootstrap": "^4.2.1"
+  }
+}
