@@ -4,7 +4,8 @@
   "description": "[View it on boeckmt.github.io](http://boeckmt.github.io/)",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "npx stylus -w styles/main.styl -o styles/main.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   "homepage": "https://github.com/boeckMt/boeckmt.github.io#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
-    "bootstrap": "^4.2.1"
+    "bootstrap": "^4.2.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.5"
   }
 }
