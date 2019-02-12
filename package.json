@@ -5,7 +5,8 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css": "stylus -w styles/main.styl -o styles/main.css"
+    "css": "stylus -w styles/main.styl -o styles/main.css",
+    "start":"npm run css"
   },
   "repository": {
     "type": "git",
