@@ -62,12 +62,17 @@ header{
 
         a {
           display: block;
-          padding: .75em 15px;
-          line-height: 1em;
-          font-size: 1em;
+          padding: .55em 15px;
+          line-height: 1.1em;
+          font-size: 1.1em;
           text-decoration: none;
           border-bottom: 1px solid #383838;
         }
+      }
+      li:last-child{
+        a:not(:hover){
+          border-bottom: none;
+        }     
       }
     }
 
@@ -79,6 +84,9 @@ header{
     display: block;
 
     border-top: 1px solid #000;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   }
 
   /** show menu-close wenn url target is main-menu 
@@ -106,7 +114,7 @@ header{
       overflow: hidden;
 
       .title{
-        margin: 0.4em 0em 0em 0.4em;
+        margin: 0.3em 0em 0em 0.4em;
         text-decoration: none;
       }
 

@@ -1,4 +1,6 @@
 vendor
 node_modules
 styles/*.css
+scripts/*.js
+scripts/*.js.map
 images/big

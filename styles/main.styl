@@ -16,6 +16,25 @@ html, body{
     font-family: 'Indie Flower', cursive;
 }
 
+header{
+  -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  
+  .logo{
+    &:hover{
+      webkit-transform: perspective(1px) translateX(10px) rotate(-10deg);
+      transform: perspective(1px) translateX(10px) rotate(-10deg);
+      }
+  }
+
+  .menu-link{
+    &:hover{
+      border-bottom: 2px solid;
+    }
+  }
+}
+
 header, .main-menu{
   //border: 1px solid;
   background-color: #fff;
@@ -46,6 +65,7 @@ header, .main-menu{
 
 main{
   section{
+    padding-bottom: 1em;
     img.responsiv-image{
       width: 100%;
     }
@@ -53,6 +73,20 @@ main{
       color: #942942;
     }
   }
+
+  figure{
+    text-align: center;
+  }
+}
+
+footer {
+  overflow: hidden;
+  width: 100%;
+    img{
+      filter: blur(1px);
+      width: 100%;
+      height auto;
+    }
 }
 
 

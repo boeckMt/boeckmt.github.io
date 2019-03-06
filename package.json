@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "stylus -w styles/main.styl -o styles/main.css",
-    "start":"npm run css"
+    "tsc": "tsc -w",
+    "start": "npm run css"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "s-grid": "^1.2.1"
   },
   "devDependencies": {
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "typescript": "^3.3.3333"
   }
 }
