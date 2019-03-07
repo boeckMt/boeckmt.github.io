@@ -1,0 +1,113 @@
+// fix timeline on scroll over header because of position asolute
+header {
+    z-index: 1;
+}
+
+//TODO: fix vertical line!!!!!
+#timeline::before {
+    content: '';
+    position: absolute;
+    margin-top: -1em;
+    left: 3em;
+    height: 100%;
+    width: 4px;
+    background: #942942;
+    visibility: initial;
+}
+
+.timeline-container {
+    width: 100%;
+    min-height: 100%;
+    display: inline-block;
+    // background: #876fb1;
+    margin: 2em 0 0;
+    /*
+    &::before {
+        content: '';
+        position: absolute;
+        margin-top: -1em;
+        left: 3em;
+        height: 80%;
+        width: 4px;
+        background: #942942;
+    }
+    */
+}
+
+.timeline-block {
+    // background: grey;
+    box-shadow: 1px 2px 5px 0px rgba(57, 63, 72, 0.3);
+    padding: 1em 1.5em;
+    margin: 1em 0;
+    margin-left: 4.2em;
+
+    /*
+    .timeline-block-content {
+        padding: 2em;
+        background: grey;
+    }
+    */
+    &::before {
+        position: absolute;
+        content: '';
+        margin-top: calc(-1em + 4px); // 1em padding + 4px shadow
+        left: calc(3em - 13px); // 30width + 4px line
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px #942942, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+        background: #fff;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .timeline-title {
+        &::before {
+            content: '';
+            position: absolute;
+            border: 8px solid transparent;
+            border-right: 8px solid #333c42;
+            margin-left: -2.5em;
+            margin-top: -4px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .timeline-block {
+        width: calc(50% - 3em); // minus 3em padding
+        margin-left: 0;
+
+        &::before {
+            // 30width + 4px line
+            left: calc(50% - 13px);
+        }
+    }
+
+    .timeline-block:nth-child(even) {
+        margin-left: calc(50% + 3em); // minus 3em padding
+    }
+
+    .timeline-block:nth-child(odd) {
+        .timeline-title::before {
+            margin-left: calc(50% - 6em + 8px);
+            border-right: none;
+            border-left: 8px solid #333c42;
+        }
+    }
+
+    /*
+    .timeline-container::before {
+        left: 50%;
+    }
+    */
+    #timeline::before {
+        left: 50%;
+    }
+}
