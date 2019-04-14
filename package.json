@@ -21,7 +21,6 @@
   "homepage": "https://github.com/boeckMt/boeckmt.github.io#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
-    "bootstrap": "^4.2.1",
     "normalize.css": "^8.0.1",
     "s-grid": "^1.2.1"
   },
