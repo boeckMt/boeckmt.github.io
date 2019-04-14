@@ -3,28 +3,18 @@ header {
     z-index: 1;
 }
 
-//TODO: fix vertical line!!!!!
-#timeline::before {
-    content: '';
-    position: absolute;
-    margin-top: -1em;
-    left: 3em;
-    height: 100%;
-    width: 4px;
-    background: #942942;
-    visibility: initial;
-}
-
 .timeline-container {
     width: 100%;
-    min-height: 100%;
-    display: inline-block;
+    height: 100%;
+    // display: inline-block;
     // background: #876fb1;
     margin: 2em 0 0;
+
     /*
     &::before {
         content: '';
-        position: absolute;
+        position: relative;
+        display: block;
         margin-top: -1em;
         left: 3em;
         height: 80%;
@@ -34,19 +24,19 @@ header {
     */
 }
 
-.timeline-block {
+
+.timeline-block{
+    //padding: 1em 0em;
+}
+
+.timeline-block-inner {
     // background: grey;
     box-shadow: 1px 2px 5px 0px rgba(57, 63, 72, 0.3);
     padding: 1em 1.5em;
-    margin: 1em 0;
+    margin: 0em 0;
     margin-left: 4.2em;
+    overflow: hidden;
 
-    /*
-    .timeline-block-content {
-        padding: 2em;
-        background: grey;
-    }
-    */
     &::before {
         position: absolute;
         content: '';
@@ -55,7 +45,7 @@ header {
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        box-shadow: 0 0 0 4px #942942, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 0 3px #942942, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
         background: #fff;
     }
 
@@ -79,22 +69,52 @@ header {
     }
 }
 
+/** line only on smal */
+@media screen and (max-width: 800px) {
+    .timeline-block{
+        display: inline-flex;
+        //padding: 1em 0em;
+        width: 100%;
+
+        .timeline-block-inner{
+            width: 100%;
+            margin: 0em 0 1em 3em
+        }
+        .timeline-block-line{
+            width: 3px;
+            background: #942942;
+            margin-left: 2em;
+            padding: 1em 0em;
+        }
+    }
+
+    .timeline-block:last-child{
+        .timeline-block-line{
+            background: #fff;
+        }
+    }
+}
+
 @media screen and (min-width: 800px) {
     .timeline-block {
-        width: calc(50% - 3em); // minus 3em padding
+        width: calc(50%);
+        margin-left: 0;
+        box-sizing: content-box;
+
+        .timeline-block-line{
+            display: none;
+        }
+    }
+
+    .timeline-block-inner {
+        width: calc(100% - 3em); // minus 3em padding
         margin-left: 0;
 
         &::before {
             // 30width + 4px line
             left: calc(50% - 13px);
         }
-    }
 
-    .timeline-block:nth-child(even) {
-        margin-left: calc(50% + 3em); // minus 3em padding
-    }
-
-    .timeline-block:nth-child(odd) {
         .timeline-title::before {
             margin-left: calc(50% - 6em + 8px);
             border-right: none;
@@ -102,12 +122,33 @@ header {
         }
     }
 
-    /*
-    .timeline-container::before {
-        left: 50%;
+    .timeline-block:nth-child(even) {
+        margin-left: calc(50%); // minus 3em padding
+        border-left: solid  #942942 3px;
     }
-    */
-    #timeline::before {
-        left: 50%;
+
+    .timeline-block:nth-child(odd) {
+        border-right: solid  #942942 3px;
+    }
+
+    .timeline-block:last-child{
+        border: none;
+    }
+
+    .timeline-block:nth-child(even) {
+        .timeline-block-inner {
+            margin-left: 3em; // minus 3em padding
+        }
+    }
+
+  
+    .timeline-block:nth-child(even) {
+        .timeline-block-inner{
+            .timeline-title::before {
+                margin-left: -2em;
+                border-right: 8px solid #333c42;
+                border-left: none;
+            }
+        }
     }
 }

@@ -22,14 +22,19 @@ fetch(url)
       repos.map((item) => {
         return `
           <div class="timeline-block">
-          <h4 class="timeline-title"><a href="${item.clone_url}" target="_blank">${item.name}</a></h4>
-          <div class="timeline-block-content">
-            ${item.description || ''}
-          </div>
-          <div class="timeline-block-date">
-            ${item.created_at.split('T')[0]}
-          </div>
-        </div>`
+            <div class="timeline-block-line">
+            </div>
+            <div class="timeline-block-inner">
+              <h4 class="timeline-title"><a href="${item.clone_url}" target="_blank">${item.name}</a></h4>
+                <div class="timeline-block-content">
+                  ${item.description || ''}
+                </div>
+              <div class="timeline-block-date">
+                ${item.created_at.split('T')[0]}
+              </div>
+            </div>
+            
+          </div>`
       }).join(" ")
       }
       
