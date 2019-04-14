@@ -1,4 +1,7 @@
 // fix timeline on scroll over header because of position asolute
+color-1 = #a6c9d9;
+color-2 = #4f6d84;
+color-3 = rgba(57, 63, 72, 0.3);
 header {
     z-index: 1;
 }
@@ -9,19 +12,6 @@ header {
     // display: inline-block;
     // background: #876fb1;
     margin: 2em 0 0;
-
-    /*
-    &::before {
-        content: '';
-        position: relative;
-        display: block;
-        margin-top: -1em;
-        left: 3em;
-        height: 80%;
-        width: 4px;
-        background: #942942;
-    }
-    */
 }
 
 
@@ -31,7 +21,7 @@ header {
 
 .timeline-block-inner {
     // background: grey;
-    box-shadow: 1px 2px 5px 0px rgba(57, 63, 72, 0.3);
+    box-shadow: 1px 2px 5px 0px color-3;
     padding: 1em 1.5em;
     margin: 0em 0;
     margin-left: 4.2em;
@@ -45,7 +35,7 @@ header {
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        box-shadow: 0 0 0 3px #942942, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 0 3px color-2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
         background: #fff;
     }
 
@@ -62,7 +52,7 @@ header {
             content: '';
             position: absolute;
             border: 8px solid transparent;
-            border-right: 8px solid #333c42;
+            border-right: 8px solid color-1;
             margin-left: -2.5em;
             margin-top: -4px;
         }
@@ -82,7 +72,7 @@ header {
         }
         .timeline-block-line{
             width: 3px;
-            background: #942942;
+            background: color-1;//#942942;
             margin-left: 2em;
             padding: 1em 0em;
         }
@@ -118,17 +108,17 @@ header {
         .timeline-title::before {
             margin-left: calc(50% - 6em + 8px);
             border-right: none;
-            border-left: 8px solid #333c42;
+            border-left: 8px solid color-1;
         }
     }
 
     .timeline-block:nth-child(even) {
         margin-left: calc(50%); // minus 3em padding
-        border-left: solid  #942942 3px;
+        border-left: solid color-1 3px; //; #942942
     }
 
     .timeline-block:nth-child(odd) {
-        border-right: solid  #942942 3px;
+        border-right: solid  color-1 3px; //; #942942
     }
 
     .timeline-block:last-child{
@@ -146,7 +136,7 @@ header {
         .timeline-block-inner{
             .timeline-title::before {
                 margin-left: -2em;
-                border-right: 8px solid #333c42;
+                border-right: 8px solid color-1;
                 border-left: none;
             }
         }

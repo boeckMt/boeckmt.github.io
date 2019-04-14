@@ -3,6 +3,7 @@
 @import '../node_modules/s-grid/s-grid-settings';
 @import '../node_modules/s-grid/s-grid-functions';
 @import '../node_modules/s-grid/s-grid-classes';
+@import 'variables';
 @import 'layout';
 @import 'timeline';
 
@@ -16,7 +17,7 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #942942;
+  //color: #942942;
 }
 
 header {
@@ -43,7 +44,7 @@ header, .main-menu {
   background-color: #fff;
 
   a {
-    color: #942942;
+    //color: #942942;
   }
 }
 
@@ -72,12 +73,8 @@ main {
   section {
     padding-bottom: 1em;
 
-    img.responsiv-image {
-      width: 100%;
-    }
-
     h3 {
-      color: #942942;
+      //color: #942942;
     }
   }
 
@@ -101,12 +98,20 @@ main {
   }
 }
 
+.img-blur{
+  filter: blur(1px);
+}
+
+.img-full{
+  width: calc(100% + 2em);
+  margin-left: -1em;
+}
+
 footer {
   overflow: hidden;
   width: 100%;
 
   img {
-    filter: blur(1px);
     width: 100%;
     height: auto;
   }
